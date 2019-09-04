@@ -20,6 +20,12 @@ pkgs <- c("shiny", "readr", "dplyr", "ggplot2", "broom", "profvis", "feather", "
 pkgs[which(!(pkgs %in% installed.packages()))]
 
 
+# Once shinytest is installed, check dependencies: if FALSE, install in next section.
+shinytest::dependenciesInstalled()
+
+
+# As well as shinyloadtest, we need the shinycannon tool for loadtesting
+
 # Windows:
 #   Check Java installation. This should return a version string, e.g. "java
 #   version "1.8.0_221"; if instead you see "java: command not found" or similar,
@@ -60,4 +66,5 @@ remotes::install_github("rstudio/shinyloadtest")
 
 # Testing
 install.packages("shinytest")
+shinytest::installDependencies()
 
