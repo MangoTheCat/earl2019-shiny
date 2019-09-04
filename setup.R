@@ -10,8 +10,8 @@
 # ===== Check =====
 # \===============/
 
-# Use this section to double-check that you have all the necessary packages for
-# the workshop. Anything missing can be installed in the following section.
+# Use this section to double-check that you have all the necessary dependencies
+# for the workshop. Anything missing can be installed in the following section.
 
 
 # Check whether all required R packages are installed (a list of any missing
@@ -20,11 +20,16 @@ pkgs <- c("shiny", "readr", "dplyr", "ggplot2", "broom", "profvis", "feather", "
 pkgs[which(!(pkgs %in% installed.packages()))]
 
 
-# Check Java installation. This should return a version string, e.g. "java
-# version "1.8.0_221"; if instead you see "java: command not found" or similar,
-# please check your Java installation. You may need to restart RStudio if you
-# have just installed or reinstalled Java.
+# Windows:
+#   Check Java installation. This should return a version string, e.g. "java
+#   version "1.8.0_221"; if instead you see "java: command not found" or similar,
+#   please check your Java installation. You may need to restart RStudio if you
+#   have just installed or reinstalled Java.
 system("java -version")
+
+# Linux/Mac: Make sure you have installed shinycannon according to instructions
+# in the next section
+system("shinycannon -h")
 
 
 
@@ -44,11 +49,13 @@ install.packages(c("profvis", "feather"))
 install.packages("remotes")
 remotes::install_github("rstudio/shinyloadtest")
 
-# Additionally, Java must be installed...
+# Additionally, on Windows and Mac, Java must be installed...
 # https://www.java.com/en/download/
-# ... and the shinycannon_____.jar executable file must be downloaded. It is
+# ... and on all operating systems, shinycannon must be downloaded or installed.
+# For Windows, the shinycannon_____.jar executable file must be downloaded. It is
 # already present in this repository, but can be found here if needed:
 # https://rstudio.github.io/shinyloadtest/#shinycannon
+# Instructions for other operating systems can also be found at that link.
 
 
 # Testing
