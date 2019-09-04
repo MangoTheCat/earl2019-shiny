@@ -6,6 +6,16 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+# /==============\
+# ===== Data =====
+# \==============/
+
+# Download the data needed for the workshop
+download.file("http://stat-computing.org/dataexpo/2009/2008.csv.bz2", "data/flights08.csv")
+download.file("http://stat-computing.org/dataexpo/2009/airports.csv", "data/airports.csv")
+
+
+
 # /===============\
 # ===== Check =====
 # \===============/
