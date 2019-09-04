@@ -6,14 +6,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# /==============\
-# ===== Data =====
-# \==============/
-
-# Download the data needed for the workshop
-download.file("http://stat-computing.org/dataexpo/2009/2008.csv.bz2", "data/flights08.csv")
-download.file("http://stat-computing.org/dataexpo/2009/airports.csv", "data/airports.csv")
-
+# Please run through each of these three sections carefully before the workshop.
+# If nothing else, please make sure you have downloaded the data, since one of
+# the files is very large and our internet connection may not be super speedy on
+# the day!
 
 
 # /===============\
@@ -77,4 +73,13 @@ remotes::install_github("rstudio/shinyloadtest")
 # Testing
 install.packages("shinytest")
 shinytest::installDependencies()
+
+
+
+# /==============\
+# ===== Data =====
+# \==============/
+
+# Download the data needed for the workshop
+source("data/get_data.R")
 
