@@ -80,6 +80,7 @@ shinytest::installDependencies()
 # ===== Data =====
 # \==============/
 
-# Download the data needed for the workshop
+# Download the data needed for the workshop - this may take a while, but please
+# be patient and let it finish!
 source("data/get_data.R")
 
